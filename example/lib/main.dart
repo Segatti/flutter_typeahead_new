@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead_new/flutter_typeahead.dart';
+import 'package:flutter_typeahead_new/flutter_typeahead_new.dart';
 import 'package:flutter_typeahead_example/checkout.dart';
 import 'package:flutter_typeahead_example/frame.dart';
 import 'package:flutter_typeahead_example/settings.dart';

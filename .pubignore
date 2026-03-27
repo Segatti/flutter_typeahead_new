@@ -1,0 +1,37 @@
+# A root `.pubignore` overrides the root `.gitignore` for `dart pub publish`.
+# Keep these patterns aligned with `.gitignore`, plus publish-only excludes.
+
+# --- same as .gitignore (required when .pubignore exists at package root) ---
+.DS_Store
+.dart_tool/
+
+.packages
+.pub/
+.flutter-plugins
+.flutter-plugins-dependencies
+
+build/
+example/.flutter-plugins*
+ios/.generated/
+ios/Flutter/Generated.xcconfig
+ios/Runner/GeneratedPluginRegistrant.*
+
+.idea
+pubspec.lock
+flutter_typeahead
+
+doc
+
+example/android/gradle/wrapper/gradle-wrapper.jar
+example/android/gradlew
+example/android/gradlew.bat
+example/example.iml
+example/ios/Flutter/flutter_export_environment.sh
+example/pubspec.lock
+
+coverage
+
+# --- publish-only: large demo asset (README uses GitHub raw URL) ---
+flutter_typeahead.gif
+
+*.iml

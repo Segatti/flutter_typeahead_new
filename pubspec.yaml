@@ -1,5 +1,5 @@
 name: flutter_typeahead_new
-version: 5.2.0
+version: 5.2.1
 
 platforms:
   android:
@@ -11,6 +11,12 @@ platforms:
 
 description: A highly customizable typeahead (autocomplete) text input field for Flutter
 homepage: https://github.com/Segatti/flutter_typeahead_new
+repository: https://github.com/Segatti/flutter_typeahead_new
+
+topics:
+  - widgets
+  - autocomplete
+  - typeahead
 
 environment:
   sdk: ">=3.10.0 <4.0.0"

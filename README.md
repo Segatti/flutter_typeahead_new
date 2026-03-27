@@ -1,13 +1,13 @@
 <meta name='keywords' content='flutter, typeahead, autocomplete, customizable, floating'>
 
-[![Pub](https://img.shields.io/pub/v/flutter_typeahead)](https://pub.dev/packages/flutter_typeahead)
+[![Pub](https://img.shields.io/pub/v/flutter_typeahead_new)](https://pub.dev/packages/flutter_typeahead_new)
 
 # Flutter TypeAhead
 
 A TypeAhead (autocomplete) widget for Flutter, where you can show suggestions to
 users as they type
 
-<img src="https://raw.githubusercontent.com/AbdulRahmanAlHamali/flutter_typeahead_new/master/flutter_typeahead.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
+<img src="https://raw.githubusercontent.com/Segatti/flutter_typeahead_new/master/flutter_typeahead.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
 ## Features
 
@@ -15,15 +15,17 @@ users as they type
 - Allows controlling all aspects: suggestions, loading, errors, empty, animation, decoration, layout, etc.
 - Comes in both Material and Cupertino widget flavors
 
-For installation, see [installation instructions](https://pub.dartlang.org/packages/flutter_typeahead_new/install).
+For installation, see [installation instructions](https://pub.dev/packages/flutter_typeahead_new/install).
 
 ## Usage
 
 You can import the package with:
 
 ```dart
-import 'package:flutter_typeahead_new/flutter_typeahead.dart';
+import 'package:flutter_typeahead_new/flutter_typeahead_new.dart';
 ```
+
+`package:flutter_typeahead_new/flutter_typeahead.dart` is still available as a compatibility re-export.
 
 The package comes in both Material and Cupertino widget flavors.
 All parameters identical, the only changes are the visual defaults.
