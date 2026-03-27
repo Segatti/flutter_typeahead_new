@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
-import 'package:flutter_typeahead/src/common/field/typeahead_field.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/cupertino/cupertino_defaults.dart';
+import 'package:flutter_typeahead_new/src/common/field/typeahead_field.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/cupertino/cupertino_defaults.dart';
 
 /// {@template flutter_typeahead.CupertinoTypeAheadField}
 /// A widget that shows suggestions above a text field while the user is typing.
@@ -45,13 +45,14 @@ class CupertinoTypeAheadField<T> extends RawTypeAheadField<T> {
     super.constrainWidth,
     super.offset,
   }) : super(
-          builder: builder ?? TypeAheadCupertinoDefaults.builder,
-          errorBuilder: errorBuilder ?? TypeAheadCupertinoDefaults.errorBuilder,
-          loadingBuilder:
-              loadingBuilder ?? TypeAheadCupertinoDefaults.loadingBuilder,
-          emptyBuilder: emptyBuilder ?? TypeAheadCupertinoDefaults.emptyBuilder,
-          itemBuilder: TypeAheadCupertinoDefaults.itemBuilder(itemBuilder),
-          decorationBuilder:
-              TypeAheadCupertinoDefaults.wrapperBuilder(decorationBuilder),
-        );
+         builder: builder ?? TypeAheadCupertinoDefaults.builder,
+         errorBuilder: errorBuilder ?? TypeAheadCupertinoDefaults.errorBuilder,
+         loadingBuilder:
+             loadingBuilder ?? TypeAheadCupertinoDefaults.loadingBuilder,
+         emptyBuilder: emptyBuilder ?? TypeAheadCupertinoDefaults.emptyBuilder,
+         itemBuilder: TypeAheadCupertinoDefaults.itemBuilder(itemBuilder),
+         decorationBuilder: TypeAheadCupertinoDefaults.wrapperBuilder(
+           decorationBuilder,
+         ),
+       );
 }

@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
 
 /// A set of Cupertino specific default builders used by a CupertinoTypeAheadField.
 abstract final class TypeAheadCupertinoDefaults {
@@ -39,10 +39,7 @@ abstract final class TypeAheadCupertinoDefaults {
       child: Text(
         'No Items Found!',
         textAlign: TextAlign.start,
-        style: TextStyle(
-          color: CupertinoColors.inactiveGray,
-          fontSize: 18,
-        ),
+        style: TextStyle(color: CupertinoColors.inactiveGray, fontSize: 18),
       ),
     );
   }
@@ -67,7 +64,7 @@ abstract final class TypeAheadCupertinoDefaults {
           return Container(
             decoration: BoxDecoration(
               color: highlighted
-                  ? CupertinoColors.systemGrey4.withOpacity(0.5)
+                  ? CupertinoColors.systemGrey4.withValues(alpha: 0.5)
                   : null,
               borderRadius: const BorderRadius.all(Radius.circular(12)),
             ),
@@ -99,10 +96,7 @@ abstract final class TypeAheadCupertinoDefaults {
   }
 
   /// The default decoration builder used by a CupertinoTypeAheadField.
-  static Widget decorationBuilder(
-    BuildContext context,
-    Widget child,
-  ) {
+  static Widget decorationBuilder(BuildContext context, Widget child) {
     return DecoratedBox(
       decoration: BoxDecoration(
         color: CupertinoTheme.of(context).barBackgroundColor.withAlpha(255),
@@ -125,9 +119,6 @@ abstract final class TypeAheadCupertinoDefaults {
     TextEditingController controller,
     FocusNode node,
   ) {
-    return CupertinoTextField(
-      controller: controller,
-      focusNode: node,
-    );
+    return CupertinoTextField(controller: controller, focusNode: node);
   }
 }

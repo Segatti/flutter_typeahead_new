@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/src/common/field/typeahead_field.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/material/material_defaults.dart';
+import 'package:flutter_typeahead_new/src/common/field/typeahead_field.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/material/material_defaults.dart';
 
 /// {@template flutter_typeahead.TypeAheadField}
 /// A widget that shows suggestions above a text field while the user is typing.
@@ -45,13 +45,14 @@ class TypeAheadField<T> extends RawTypeAheadField<T> {
     super.constrainWidth,
     super.offset,
   }) : super(
-          builder: builder ?? TypeAheadMaterialDefaults.builder,
-          errorBuilder: errorBuilder ?? TypeAheadMaterialDefaults.errorBuilder,
-          loadingBuilder:
-              loadingBuilder ?? TypeAheadMaterialDefaults.loadingBuilder,
-          emptyBuilder: emptyBuilder ?? TypeAheadMaterialDefaults.emptyBuilder,
-          itemBuilder: TypeAheadMaterialDefaults.itemBuilder(itemBuilder),
-          decorationBuilder:
-              TypeAheadMaterialDefaults.wrapperBuilder(decorationBuilder),
-        );
+         builder: builder ?? TypeAheadMaterialDefaults.builder,
+         errorBuilder: errorBuilder ?? TypeAheadMaterialDefaults.errorBuilder,
+         loadingBuilder:
+             loadingBuilder ?? TypeAheadMaterialDefaults.loadingBuilder,
+         emptyBuilder: emptyBuilder ?? TypeAheadMaterialDefaults.emptyBuilder,
+         itemBuilder: TypeAheadMaterialDefaults.itemBuilder(itemBuilder),
+         decorationBuilder: TypeAheadMaterialDefaults.wrapperBuilder(
+           decorationBuilder,
+         ),
+       );
 }

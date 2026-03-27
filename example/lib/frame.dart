@@ -1,9 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/flutter_typeahead.dart';
 import 'package:flutter_typeahead_example/options.dart';
 import 'package:flutter_typeahead_example/product.dart';
+import 'package:flutter_typeahead_new/flutter_typeahead.dart';
 
 class MaterialCupertinoFrame extends StatefulWidget {
   const MaterialCupertinoFrame({

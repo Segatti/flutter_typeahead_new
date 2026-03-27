@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/box/suggestions_box.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
 
 void main() {
   group('SuggestionsBox', () {
@@ -23,9 +23,7 @@ void main() {
           home: Material(
             child: SuggestionsBox(
               controller: controller,
-              builder: (context) => const SizedBox(
-                key: Key('suggestions'),
-              ),
+              builder: (context) => const SizedBox(key: Key('suggestions')),
             ),
           ),
         ),

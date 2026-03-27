@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
 
 void main() {
   group('SuggestionsController', () {
@@ -168,9 +168,7 @@ void main() {
       await tester.pumpWidget(Container());
       expect(
         () => SuggestionsController.of<String>(
-          tester.element(
-            find.byType(Container),
-          ),
+          tester.element(find.byType(Container)),
         ),
         throwsFlutterError,
       );

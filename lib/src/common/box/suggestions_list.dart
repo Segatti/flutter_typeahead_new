@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
 
 /// A widget that shows a list of suggestions based on user input.
 class SuggestionsList<T> extends StatefulWidget {

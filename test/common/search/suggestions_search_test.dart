@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/common/search/suggestions_search.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/common/search/suggestions_search.dart';
 
 void main() {
   group('SuggestionsSearch', () {
@@ -16,10 +16,7 @@ void main() {
       controller.open();
       textEditingController = TextEditingController();
       suggestionsCallback = (pattern) async {
-        return [
-          '${pattern}1',
-          '${pattern}2',
-        ];
+        return ['${pattern}1', '${pattern}2'];
       };
       debounceDuration = const Duration(milliseconds: 0);
     });
@@ -73,8 +70,9 @@ void main() {
       expect(controller.error.toString(), 'Exception: Failed to load');
     });
 
-    testWidgets('reloads entries when text changes',
-        (WidgetTester tester) async {
+    testWidgets('reloads entries when text changes', (
+      WidgetTester tester,
+    ) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
@@ -100,8 +98,9 @@ void main() {
       expect(controller.suggestions, ['new1', 'new2']);
     });
 
-    testWidgets('reloads entries when suggestions are set to null',
-        (WidgetTester tester) async {
+    testWidgets('reloads entries when suggestions are set to null', (
+      WidgetTester tester,
+    ) async {
       int count = 0;
       await tester.pumpWidget(
         MaterialApp(

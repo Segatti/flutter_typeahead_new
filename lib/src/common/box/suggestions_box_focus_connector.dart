@@ -1,6 +1,6 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/connector_widget.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
 
 /// Connects the focus of the suggestions box to the controller state.
 class SuggestionsBoxFocusConnector<T> extends StatefulWidget {
@@ -20,9 +20,7 @@ class SuggestionsBoxFocusConnector<T> extends StatefulWidget {
 
 class _SuggestionsBoxFocusConnectorState<T>
     extends State<SuggestionsBoxFocusConnector<T>> {
-  late final FocusNode focusNode = FocusNode(
-    canRequestFocus: false,
-  );
+  late final FocusNode focusNode = FocusNode(canRequestFocus: false);
 
   @override
   void initState() {
@@ -73,10 +71,7 @@ class _SuggestionsBoxFocusConnectorState<T>
         value: widget.controller,
         connect: (value) => value.addListener(onControllerFocus),
         disconnect: (value, key) => value.removeListener(onControllerFocus),
-        child: Focus(
-          focusNode: focusNode,
-          child: widget.child,
-        ),
+        child: Focus(focusNode: focusNode, child: widget.child),
       ),
     );
   }

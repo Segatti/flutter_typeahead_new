@@ -1,15 +1,15 @@
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
-import 'package:flutter_typeahead/src/common/base/floater.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_focus_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_highlight_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_keyboard_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_box_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_select_connector.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_tap_connector.dart';
+import 'package:flutter_typeahead_new/src/common/base/connector_widget.dart';
+import 'package:flutter_typeahead_new/src/common/base/floater.dart';
+import 'package:flutter_typeahead_new/src/common/box/suggestions_box.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_focus_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_highlight_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_keyboard_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_box_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_select_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_tap_connector.dart';
 
 /// A widget that displays a list of suggestions above or below another widget.
 class SuggestionsField<T> extends StatefulWidget {
@@ -50,7 +50,8 @@ class SuggestionsField<T> extends StatefulWidget {
   final Widget Function(
     BuildContext context,
     SuggestionsController<T> controller,
-  ) builder;
+  )
+  builder;
 
   /// {@template flutter_typeahead.SuggestionsField.fieldBuilder}
   /// The child of the suggestions field.
@@ -240,9 +241,9 @@ class _SuggestionsFieldState<T> extends State<SuggestionsField<T>> {
 
           VerticalDirection newEffectiveDirection =
               switch (data.effectiveDirection) {
-            AxisDirection.up => VerticalDirection.up,
-            _ => VerticalDirection.down,
-          };
+                AxisDirection.up => VerticalDirection.up,
+                _ => VerticalDirection.down,
+              };
           if (newEffectiveDirection != controller.effectiveDirection) {
             // It is generally discouraged to add side-effects in build methods.
             // However, this is a place where we can update the effective direction
@@ -279,10 +280,7 @@ class _SuggestionsFieldState<T> extends State<SuggestionsField<T>> {
             );
           }
 
-          list = Semantics(
-            container: true,
-            child: list,
-          );
+          list = Semantics(container: true, child: list);
 
           return list;
         },

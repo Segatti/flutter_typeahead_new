@@ -2,7 +2,7 @@
 
 ## Issues
 
-If you have spotted a bug, found inconsistent documentation, or have a feature request, please create a [new issue](https://github.com/AbdulRahmanAlHamali/flutter_typeahead/issues/new).
+If you have spotted a bug, found inconsistent documentation, or have a feature request, please create a [new issue](https://github.com/AbdulRahmanAlHamali/flutter_typeahead_new/issues/new).
 
 Even if you would like to submit a PR, please create an issue first so that we can discuss the problem or feature.
 

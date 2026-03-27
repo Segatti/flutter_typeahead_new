@@ -7,7 +7,7 @@
 A TypeAhead (autocomplete) widget for Flutter, where you can show suggestions to
 users as they type
 
-<img src="https://raw.githubusercontent.com/AbdulRahmanAlHamali/flutter_typeahead/master/flutter_typeahead.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
+<img src="https://raw.githubusercontent.com/AbdulRahmanAlHamali/flutter_typeahead_new/master/flutter_typeahead.gif" width="400" height="auto" alt="Flutter TypeAhead Demo" />
 
 ## Features
 
@@ -15,14 +15,14 @@ users as they type
 - Allows controlling all aspects: suggestions, loading, errors, empty, animation, decoration, layout, etc.
 - Comes in both Material and Cupertino widget flavors
 
-For installation, see [installation instructions](https://pub.dartlang.org/packages/flutter_typeahead/install).
+For installation, see [installation instructions](https://pub.dartlang.org/packages/flutter_typeahead_new/install).
 
 ## Usage
 
 You can import the package with:
 
 ```dart
-import 'package:flutter_typeahead/flutter_typeahead.dart';
+import 'package:flutter_typeahead_new/flutter_typeahead.dart';
 ```
 
 The package comes in both Material and Cupertino widget flavors.
@@ -200,8 +200,8 @@ To disable animatons, return the `child` directly.
 
 The suggestions box does not fire for each character the user types. Instead,
 we wait until the user is idle for a duration of time, and then call the
-`suggestionsCallback`. The duration defaults to ` 300 milliseconds``, but can be
-configured using the  `debounceDuration` parameter.
+`suggestionsCallback`. The duration defaults to `300 milliseconds``, but can be
+configured using the `debounceDuration` parameter.
 
 ### Customizing the direction
 
@@ -332,7 +332,7 @@ Flutter now also features the inbuilt Autocomplete widget, which has similar beh
 
 ## For more information
 
-Visit the [API Documentation](https://pub.dartlang.org/documentation/flutter_typeahead/).
+Visit the [API Documentation](https://pub.dartlang.org/documentation/flutter_typeahead_new/).
 
 ## Team
 

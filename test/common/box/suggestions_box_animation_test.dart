@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/src/common/box/suggestions_box_animation.dart';
+import 'package:flutter_typeahead_new/src/common/box/suggestions_box_animation.dart';
 
 void main() {
   group('SuggestionsListAnimation', () {
@@ -15,8 +15,9 @@ void main() {
       controller.dispose();
     });
 
-    testWidgets('starts hidden when the controller is not open',
-        (WidgetTester tester) async {
+    testWidgets('starts hidden when the controller is not open', (
+      WidgetTester tester,
+    ) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
@@ -31,8 +32,9 @@ void main() {
       expect(find.byKey(const Key('child')), findsNothing);
     });
 
-    testWidgets('starts visible when the controller is open',
-        (WidgetTester tester) async {
+    testWidgets('starts visible when the controller is open', (
+      WidgetTester tester,
+    ) async {
       controller.open();
       await tester.pumpWidget(
         MaterialApp(
@@ -48,8 +50,9 @@ void main() {
       expect(find.byKey(const Key('child')), findsOneWidget);
     });
 
-    testWidgets('becomes visible when the controller opens',
-        (WidgetTester tester) async {
+    testWidgets('becomes visible when the controller opens', (
+      WidgetTester tester,
+    ) async {
       await tester.pumpWidget(
         MaterialApp(
           home: Material(
@@ -67,8 +70,9 @@ void main() {
       expect(find.byKey(const Key('child')), findsOneWidget);
     });
 
-    testWidgets('becomes hidden when the controller closes',
-        (WidgetTester tester) async {
+    testWidgets('becomes hidden when the controller closes', (
+      WidgetTester tester,
+    ) async {
       controller.open();
       await tester.pumpWidget(
         MaterialApp(
@@ -101,12 +105,12 @@ void main() {
               child: const SizedBox(key: Key('child')),
               transitionBuilder: (context, animation, child) =>
                   ValueListenableBuilder(
-                valueListenable: animation,
-                builder: (context, value, _) {
-                  animationValue = animation.value;
-                  return child;
-                },
-              ),
+                    valueListenable: animation,
+                    builder: (context, value, _) {
+                      animationValue = animation.value;
+                      return child;
+                    },
+                  ),
             ),
           ),
         ),
@@ -142,12 +146,12 @@ void main() {
               child: const SizedBox(),
               transitionBuilder: (context, animation, child) =>
                   ValueListenableBuilder(
-                valueListenable: animation,
-                builder: (context, value, _) {
-                  animationValue = animation.value;
-                  return child;
-                },
-              ),
+                    valueListenable: animation,
+                    builder: (context, value, _) {
+                      animationValue = animation.value;
+                      return child;
+                    },
+                  ),
             ),
           ),
         ),

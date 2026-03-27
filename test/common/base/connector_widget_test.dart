@@ -1,6 +1,6 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_typeahead/src/common/base/connector_widget.dart';
+import 'package:flutter_typeahead_new/src/common/base/connector_widget.dart';
 
 void main() {
   group('ConnectorWidget Tests', () {
@@ -40,8 +40,9 @@ void main() {
       expect(disconnectCalled, isTrue);
     });
 
-    testWidgets('calls connect and disconnect on value change',
-        (WidgetTester tester) async {
+    testWidgets('calls connect and disconnect on value change', (
+      WidgetTester tester,
+    ) async {
       bool connectCalled = false;
       bool disconnectCalled = false;
 
@@ -80,8 +81,9 @@ void main() {
       expect(disconnectCalled, isTrue);
     });
 
-    testWidgets('calls disconnect with correct key',
-        (WidgetTester tester) async {
+    testWidgets('calls disconnect with correct key', (
+      WidgetTester tester,
+    ) async {
       int? disconnectKey;
 
       await tester.pumpWidget(

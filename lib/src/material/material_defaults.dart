@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/scheduler.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
-import 'package:flutter_typeahead/src/common/base/types.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/types.dart';
 
 /// A set of Material specific default builders used by a TypeAheadField.
 abstract final class TypeAheadMaterialDefaults {
@@ -87,10 +87,7 @@ abstract final class TypeAheadMaterialDefaults {
   }
 
   /// The default decoration builder used by a TypeAheadField.
-  static Widget decorationBuilder(
-    BuildContext context,
-    Widget child,
-  ) {
+  static Widget decorationBuilder(BuildContext context, Widget child) {
     return Material(
       type: MaterialType.card,
       elevation: 4,
@@ -105,9 +102,6 @@ abstract final class TypeAheadMaterialDefaults {
     TextEditingController controller,
     FocusNode node,
   ) {
-    return TextField(
-      controller: controller,
-      focusNode: node,
-    );
+    return TextField(controller: controller, focusNode: node);
   }
 }

@@ -1,8 +1,8 @@
 import 'package:flutter/services.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:flutter_typeahead/src/common/base/suggestions_controller.dart';
+import 'package:flutter_typeahead_new/src/common/base/suggestions_controller.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_typeahead/src/common/field/suggestions_field_highlight_connector.dart';
+import 'package:flutter_typeahead_new/src/common/field/suggestions_field_highlight_connector.dart';
 
 void main() {
   group('SuggestionsFieldHighlightConnector', () {
@@ -18,33 +18,31 @@ void main() {
     });
 
     testWidgets(
-        'increments highlighted suggestion when direction down and arrow down key is pressed',
-        (WidgetTester tester) async {
-      controller.open();
+      'increments highlighted suggestion when direction down and arrow down key is pressed',
+      (WidgetTester tester) async {
+        controller.open();
 
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Material(
-            child: SuggestionsFieldHighlightConnector(
-              controller: controller,
-              child: const Focus(
-                autofocus: true,
-                child: SizedBox(),
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Material(
+              child: SuggestionsFieldHighlightConnector(
+                controller: controller,
+                child: const Focus(autofocus: true, child: SizedBox()),
               ),
             ),
           ),
-        ),
-      );
+        );
 
-      await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
-      await tester.pump();
+        await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+        await tester.pump();
 
-      expect(controller.highlighted, 0);
+        expect(controller.highlighted, 0);
 
-      await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
+        await tester.sendKeyEvent(LogicalKeyboardKey.arrowDown);
 
-      expect(controller.highlighted, 1);
-    });
+        expect(controller.highlighted, 1);
+      },
+    );
 
     testWidgets(
       'decrements highlighted suggestion when direction down and arrow up key is pressed',
@@ -57,10 +55,7 @@ void main() {
             home: Material(
               child: SuggestionsFieldHighlightConnector(
                 controller: controller,
-                child: const Focus(
-                  autofocus: true,
-                  child: SizedBox(),
-                ),
+                child: const Focus(autofocus: true, child: SizedBox()),
               ),
             ),
           ),
@@ -78,37 +73,36 @@ void main() {
     );
 
     testWidgets(
-        'increments highlighted suggestion when direction up and arrow up key is pressed',
-        (WidgetTester tester) async {
-      controller.open();
-      controller.effectiveDirection = VerticalDirection.up;
+      'increments highlighted suggestion when direction up and arrow up key is pressed',
+      (WidgetTester tester) async {
+        controller.open();
+        controller.effectiveDirection = VerticalDirection.up;
 
-      await tester.pumpWidget(
-        MaterialApp(
-          home: Material(
-            child: SuggestionsFieldHighlightConnector(
-              controller: controller,
-              child: const Focus(
-                autofocus: true,
-                child: SizedBox(),
+        await tester.pumpWidget(
+          MaterialApp(
+            home: Material(
+              child: SuggestionsFieldHighlightConnector(
+                controller: controller,
+                child: const Focus(autofocus: true, child: SizedBox()),
               ),
             ),
           ),
-        ),
-      );
+        );
 
-      await tester.sendKeyEvent(LogicalKeyboardKey.arrowUp);
-      await tester.pump();
+        await tester.sendKeyEvent(LogicalKeyboardKey.arrowUp);
+        await tester.pump();
 
-      expect(controller.highlighted, 0);
+        expect(controller.highlighted, 0);
 
-      await tester.sendKeyEvent(LogicalKeyboardKey.arrowUp);
+        await tester.sendKeyEvent(LogicalKeyboardKey.arrowUp);
 
-      expect(controller.highlighted, 1);
-    });
+        expect(controller.highlighted, 1);
+      },
+    );
 
-    testWidgets('selects highlighted suggestion when enter key is pressed',
-        (WidgetTester tester) async {
+    testWidgets('selects highlighted suggestion when enter key is pressed', (
+      WidgetTester tester,
+    ) async {
       controller.open();
       controller.highlighted = 1;
       String? selected;
@@ -122,10 +116,7 @@ void main() {
           home: Material(
             child: SuggestionsFieldHighlightConnector(
               controller: controller,
-              child: const Focus(
-                autofocus: true,
-                child: SizedBox(),
-              ),
+              child: const Focus(autofocus: true, child: SizedBox()),
             ),
           ),
         ),
@@ -137,8 +128,9 @@ void main() {
       expect(controller.highlighted, null);
     });
 
-    testWidgets('closes suggestions when escape key is pressed',
-        (WidgetTester tester) async {
+    testWidgets('closes suggestions when escape key is pressed', (
+      WidgetTester tester,
+    ) async {
       controller.open();
       controller.highlighted = 1;
 
@@ -147,10 +139,7 @@ void main() {
           home: Material(
             child: SuggestionsFieldHighlightConnector(
               controller: controller,
-              child: const Focus(
-                autofocus: true,
-                child: SizedBox(),
-              ),
+              child: const Focus(autofocus: true, child: SizedBox()),
             ),
           ),
         ),
